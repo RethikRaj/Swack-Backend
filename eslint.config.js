@@ -1,9 +1,8 @@
 import js from '@eslint/js';
 import pluginJs from '@eslint/js';
-
-import globals from 'globals';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import { defineConfig } from 'eslint/config';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
 
 export default defineConfig([
   {
