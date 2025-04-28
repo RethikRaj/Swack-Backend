@@ -6,7 +6,7 @@ export const validate = (schema)=>{
             await schema.parseAsync(req.body);
             next();
         }catch(error){
-            console.log("Zod validation Error : " , error, error.errors);
+            // console.log("Zod validation Error : " , error, error.errors);
             let explanation = [];
 
             error.errors.forEach((ele)=>{

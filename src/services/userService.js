@@ -2,8 +2,7 @@ import bcrypt from "bcrypt";
 import { StatusCodes } from "http-status-codes";
 
 import userRepository from "../repositories/userRepository.js";
-import ConflictError from "../utils/errors/conflictError.js";
-import ValidationError from "../utils/errors/validationError.js";
+import { ConflictError, ValidationError } from "../utils/errors/customErrors.js";
 import { generateJwtToken } from "../utils/jwt.js";
 
 export const signupService = async (user) => {

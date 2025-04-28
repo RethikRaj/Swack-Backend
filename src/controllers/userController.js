@@ -19,10 +19,7 @@ export const signupController = async (req,res)=>{
 export const signinController = async (req,res)=>{
     try{
         const user = await signinService(req.body);
-        res.status(StatusCodes.OK).json({
-            message: 'User authenticated successfully',
-            user
-        });
+        res.status(StatusCodes.OK).json(successResponse(user, 'User authenticated successfully' ));
     }catch(error){
         if(error.status){
             return res.status(error.status).json({
